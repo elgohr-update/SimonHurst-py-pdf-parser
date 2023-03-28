@@ -12,7 +12,7 @@ jobs:
       id: tagName
       run: echo ::set-output name=tag::${GITHUB_REF/refs\/tags\//}
     - name: Publish to docker hub
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: jstockwin/py-pdf-parser
         username: ${{ secrets.DOCKER_USERNAME }}
